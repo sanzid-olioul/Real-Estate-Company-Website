@@ -1,0 +1,50 @@
+{% extends 'base.html'%}
+
+<article>
+    {% block article %}
+        {% comment %} Hero starts  {% endcomment %}
+        <section class="hero" id="home">
+            {% include  'hero.html' %}
+        </section>
+        {% comment %} Hero ends  {% endcomment %}
+        
+        {% comment %} About Starts  {% endcomment %}
+
+        <section class="about" id="about">
+            {% include  'about_us.html' %}
+        </section>
+
+        {% comment %} About Ends  {% endcomment %}
+
+        {% comment %} Service Starts  {% endcomment %}
+        <section class="service" id="service">
+            {% include  'service.html' %}
+        </section>
+        {% comment %} Service Ends  {% endcomment %}
+        
+        {% comment %} Poperty Starts  {% endcomment %}
+        <section class="property" id="property">
+            {% include  'property.html' %}
+        </section>
+        {% comment %} Poperty Ends  {% endcomment %}
+
+        {% comment %} Features Starts  {% endcomment %}
+        <section class="features">
+            {% include  'features.html' %}
+        </section>
+        {% comment %} Features Ends  {% endcomment %}
+
+        {% comment %} Blog Starts  {% endcomment %}
+        <section class="blog" id="blog">
+            {% include  'blog.html' %}
+        </section>
+        {% comment %} Blog Ends  {% endcomment %}
+        {% comment %} CTA starts  {% endcomment %}
+        <section class="cta">
+            {% include  'cta.html' %}
+        </section>
+        {% comment %} CTA ends  {% endcomment %}
+           
+    {% endblock %}
+</article>
+

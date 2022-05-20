@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Homeverse - Find your dream house</title>
+        <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+        <link rel="stylesheet" href="{% static '/css/style.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+      </head>
+<body>
+  {% comment %} Header begins {% endcomment %}
+
+  <header class="header" data-header>
+    {% include 'header.html'%}
+    {% comment %} {% block header %}
+    {% endblock %} {% endcomment %}
+  </header>
+
+  {% comment %} Header ends  {% endcomment %}
+
+  {% comment %} Main Starts {% endcomment %}
+
+  <main>
+    {% block article %}
+    {% endblock %}
+  </main>
+
+{% comment %} Main Ends {% endcomment %}
+
+{% comment %} Footer Starts {% endcomment %}
+
+  <footer class="footer">
+    {% comment %} {% block footer %}
+    {% endblock %} {% endcomment %}
+    {% include 'footer.html'%}
+  </footer>
+
+  {% comment %} Footer ends {% endcomment %}
+
+  {% comment %} Java Scripts links {% endcomment %}
+
+  <script src="{% static 'js/script.js'%}"></script>
+
+  {% comment %} - ionicon link {% endcomment %}
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
